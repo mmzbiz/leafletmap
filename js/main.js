@@ -14,32 +14,31 @@ function newFunction() {
 
     document.onkeydown = keydown;
 
+    function easing(t) {
+        return t * (2 - t);
+    }
+
     function keydown(event) {
 
-
-        switch (event.keyCode) {
-            //left
-            case 37:
-                map.panBy([-50, 0]);
-                break;
-
-                //up
-            case 38:
-                map.panBy([0, -50]);
-                break;
-
-                //right
-            case 39:
-                map.panBy([50, 0]);
-                break;
-
-                //down
-            case 40:
-                map.panBy([0, 50]);
-                break;
-            default:
-                alert(event.keyCode);
-                break;
+        event.preventDefault();
+        if (event.keyCode === 37) { //left
+            map.panBy([-100, 0], {
+                easing: easing
+            });
+        } else if (event.keyCode === 38) { //up
+            map.panBy([0, -100], {
+                easing: easing
+            });
+        } else if (event.keyCode === 39) { //right
+            map.panBy([100, 0], {
+                easing: easing
+            });
+        } else if (event.keyCode === 40) { //down
+            map.panBy([0, 100], {
+                easing: easing
+            });
+        } else {
+            alert(event.keyCode);
         }
     }
 }
