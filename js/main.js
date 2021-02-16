@@ -40,6 +40,13 @@ function newFunction() {
             map.panBy([0, 100], {
                 easing: easing
             });
+
+        } else if (event.keyCode === 52) { //key 4
+
+            map.zoomIn();
+        } else if (event.keyCode === 54) {　 //key 6
+
+            map.zoomOut();
         } else {
             console.log(event.keyCode);
         }
