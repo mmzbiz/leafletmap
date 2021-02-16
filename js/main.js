@@ -4,13 +4,7 @@ function newFunction() {
 
     var url = new URL(window.location.href);
     var params = url.searchParams;
-    var appid = params.get('appid');
-    if (!appid) {
-
-        alert("appid is not set");
-        return;
-    }
-    mapboxgl.accessToken = appid;
+    mapboxgl.accessToken = 'pk.eyJ1IjoibW16MDIiLCJhIjoiY2pxNjU3NGZvMDYxeTQyb3g0bjFidTR6aCJ9.Y7yyJIqNyCjHwe_VD8JbHg';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
