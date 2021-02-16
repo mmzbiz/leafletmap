@@ -20,6 +20,9 @@ function newFunction() {
 
     function keydown(event) {
 
+        var element = document.createElement("span");
+        element.innerText = event.keyCode + "/";
+        document.getElementById("debug").appendChild(element);
         event.preventDefault();
         if (event.keyCode === 37) { //left
             map.panBy([-100, 0], {
@@ -38,7 +41,7 @@ function newFunction() {
                 easing: easing
             });
         } else {
-            alert(event.keyCode);
+            console.log(event.keyCode);
         }
     }
 }
