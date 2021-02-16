@@ -1,1 +1,1 @@
-pages url: https://mmzbiz.github.io/leafletmap/index.html?appid={your mapbox key}
+pages url: https://mmzbiz.github.io/leafletmap/
